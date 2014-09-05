@@ -33,6 +33,9 @@ The following external modules are included and subject to its own license.
 History
 -----------------------------------
 
+v1.1
+* Completed "Redovisning"
+
 v1.0 (Kmom01)
 * First release.
 
