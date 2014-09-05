@@ -51,25 +51,23 @@ $herbert['lang'] = 'sv';
 $herbert['title_append'] = ' | Herbert';
 
 $herbert['header'] = <<<EOD
-<a href='./' class='sitelogo'><img src='img/herbert.png' alt='Herbert Logo'/></a>
-<span class='sitetitle'>Webbtemplate</span>
-<span class='siteslogan'>Återanvändbara moduler för webbutveckling med PHP</span>
+<a href='./' class='sitelogo'><img src='img/me.png' alt='Me Logo'/></a>
+<span class='sitetitle'>It's all about me</span>
+<span class='siteslogan'>Min me-sida i kursen Databaser och Objektorienterad PHP-programmering</span>
 EOD;
 
 $herbert['menu'] = array(
   'callback' => 'modifyNavbar',
   'items' => array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
-    'about' => array('text'=>'OM', 'url'=>'about.php', 'class'=>null),
-    'slideshow' => array('text'=>'SLIDESHOW', 'url'=>'slideshow.php', 'class'=>null),
-    'dice' => array('text'=>'TÄRNING', 'url'=>'dice.php', 'class'=>null),
+    'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
     'source' => array('text'=>'KÄLLKOD', 'url'=>'source.php', 'class'=>null)
   )
 );
 
 $herbert['footer'] = <<<EOD
 <footer>
-	<p>© 2014 Marcus Törnroth | <a href='https://github.com/rcus/herbert'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
+	<p>© 2014 Marcus Törnroth | <a href='https://github.com/rcus/oophp'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
 </footer>
 EOD;
 

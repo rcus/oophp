@@ -13,7 +13,7 @@
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
     <div id='navbar'><?=get_menu($herbert['menu'])?></div>
-    <div id='main'><?=$main?></div>
+    <div id='main'><article><?=$main?></article></div>
     <div id='footer'><?=$footer?></div>
   </div>
 

@@ -28,3 +28,11 @@ function myAutoloader($class) {
   }
 }
 spl_autoload_register('myAutoloader');
+
+/**
+ * var_dump()
+ *
+ */
+function myDump($dump) {
+	echo  '<pre>' . htmlentities(print_r($dump, true)) . '</pre>';
+}
