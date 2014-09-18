@@ -34,5 +34,5 @@ spl_autoload_register('myAutoloader');
  *
  */
 function myDump($dump) {
-	echo  '<pre>' . htmlentities(print_r($dump, true)) . '</pre>';
+	return  '<pre>' . htmlentities(print_r($dump, true)) . '</pre>';
 }

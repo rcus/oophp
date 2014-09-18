@@ -61,7 +61,8 @@ $herbert['menu'] = array(
   'items' => array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
     'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
-    'source' => array('text'=>'KÄLLKOD', 'url'=>'source.php', 'class'=>null)
+    'pig' => array('text'=>'KASTA GRIS', 'url'=>'pig.php', 'class'=>null),
+    'source' => array('text'=>'KÄLLKOD', 'url'=>'source.php', 'class'=>null),
   )
 );
 
