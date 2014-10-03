@@ -33,6 +33,9 @@ The following external modules are included and subject to its own license.
 History
 -----------------------------------
 
+v3.0
+* Release for Kmom03
+
 v2.0
 * Release for Kmom02.
 * New game: Kasta gris, try it out!
