@@ -62,6 +62,8 @@ $herbert['menu'] = array(
     'home' => array('text'=>'HEM', 'url'=>'./', 'class'=>null),
     'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
     'pig' => array('text'=>'KASTA GRIS', 'url'=>'pig.php', 'class'=>null),
+    'movies' => array('text'=>'FILMER', 'url'=>'movies.php', 'class'=>null),
+    'admin' => array('text'=>'LOGGA ' . ((isset($_SESSION['auth']) && $_SESSION['auth']->IsAuth()) ? 'UT' : 'IN'), 'url'=>'admin.php', 'class'=>null),
     'source' => array('text'=>'KÄLLKOD', 'url'=>'source.php', 'class'=>null),
   )
 );
@@ -71,6 +73,16 @@ $herbert['footer'] = <<<EOD
 	<p>© 2014 Marcus Törnroth | <a href='https://github.com/rcus/oophp'>GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></p>
 </footer>
 EOD;
+
+
+/**
+ * Settings for the database.
+ *
+ */
+$herbert['db']['dsn']            = 'mysql:host=localhost;dbname=bth_Movie;';
+$herbert['db']['username']       = 'userbth';
+$herbert['db']['password']       = 'passwordbth';
+$herbert['db']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 
 
 /**

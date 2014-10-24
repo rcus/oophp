@@ -213,13 +213,7 @@ class CPigGame extends CPigRound
         parent::StopRound();
         $this->status[$player] = ($this->GetSum($player) < 100) ? 'stop' : 'win';
         $this->status[abs($player-1)] = ($this->GetSum($player) < 100) ? 'start' : 'lose';
-/*        $this->status[$player] = 'stop';
-        $this->status[abs($player-1)] = 'start';
-        if ($this->GetSum($player) >= 100) {
-            $this->status[$player] = 'win';
-            $this->status[abs($player-1)] = 'lose';
-        }
-*/    }
+    }
 
 
     // View dices
