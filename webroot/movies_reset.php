@@ -15,9 +15,9 @@ if (!(isset($_SESSION['auth']) && $_SESSION['auth']->IsAuth())) {
 // Restore the database to its original settings
 $sql      = 'movies.sql';
 $mysql    = '/usr/bin/mysql';
-$host     = 'localhost';
-$login    = 'userbth';
-$password = 'passwordbth';
+$host     = 'blu-ray.student.bth.se';
+$login    = 'matg12';
+$password = '';
 $output = null;
  
 if(isset($_POST['restore']) || isset($_GET['restore'])) {
