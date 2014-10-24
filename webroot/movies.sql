@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS bth_Movie;
+CREATE DATABASE IF NOT EXISTS matg12;
 
-USE bth_Movie;
+USE matg12;
 
 SET NAMES 'utf8';
 
