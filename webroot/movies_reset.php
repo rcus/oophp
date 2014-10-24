@@ -7,11 +7,6 @@
 // Include the essential config-file which also creates the $herbert variable with its defaults.
 include(__DIR__.'/config.php'); 
 
-// Auth needed
-if (!(isset($_SESSION['auth']) && $_SESSION['auth']->IsAuth())) {
-    header('Location: admin.php');
-}
-
 // Restore the database to its original settings
 $sql      = 'movies.sql';
 $mysql    = '/usr/bin/mysql';
