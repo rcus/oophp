@@ -16,9 +16,13 @@ if(isset($_POST['login'])) {
     if (!$auth->Login($_POST['user'], $_POST['password'])) {
         $output = "Det blev något fel. Försök igen!";
     }
+    // Save session
+    $_SESSION['auth'] = $auth;
+
 // Action on logout
 } elseif (isset($_POST['logout']) || isset($_GET['logout'])) {
     if ($_SESSION['auth']->Logout()) {
+        unset($_SESSION['auth']);
         $output = "Du är nu utloggad!";
     }
 }
@@ -52,9 +56,6 @@ else {
 </form>
 EOD;
 }
-
-// Save session
-$_SESSION['auth'] = $auth;
 
 
 // Do it and store it all in variables in the Herbert container.
