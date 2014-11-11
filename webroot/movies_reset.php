@@ -10,9 +10,9 @@ include(__DIR__.'/config.php');
 // Restore the database to its original settings
 $sql      = 'movies.sql';
 $mysql    = '/usr/bin/mysql';
-$host     = 'blu-ray.student.bth.se';
-$login    = 'matg12';
-$password = '';
+$host     = 'localhost'; // blu-ray.student.bth.se
+$login    = 'userbth'; // matg12
+$password = 'passwordbth';
 $output = null;
  
 if(isset($_POST['restore']) || isset($_GET['restore'])) {
