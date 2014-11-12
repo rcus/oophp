@@ -63,6 +63,7 @@ $herbert['menu'] = array(
     'report' => array('text'=>'REDOVISNING', 'url'=>'report.php', 'class'=>null),
     'pig' => array('text'=>'KASTA GRIS', 'url'=>'pig.php', 'class'=>null),
     'movies' => array('text'=>'FILMER', 'url'=>'movies.php', 'class'=>null),
+    'content' => array('text'=>'INNEHÅLL', 'url'=>'content.php', 'class'=>null),
     'admin' => array('text'=>'LOGGA ' . ((isset($_SESSION['auth']) && $_SESSION['auth']->IsAuth()) ? 'UT' : 'IN'), 'url'=>'admin.php', 'class'=>null),
     'source' => array('text'=>'KÄLLKOD', 'url'=>'source.php', 'class'=>null),
   )

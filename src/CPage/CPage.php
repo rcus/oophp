@@ -32,6 +32,7 @@ class CPage extends CContent
     public function GetPage($url = null) {
         $url = (is_null($url)) ? $this->defaultUrl : $url;
         $res = parent::GetContent('page', $url);
+        isset($res[0]) or die('No page to view.');
         $content = (array) $res[0];
 
         // Sanitizing
@@ -40,20 +41,4 @@ class CPage extends CContent
 
         return $content;
     }
-
-
-    /**
-     * Create a link to the content, based on its type.
-     *
-     * @param object $content to link to.
-     * @return string with url to display content.
-     */
-/*    public function getUrlToContent($content) {
-      switch($content->type) {
-        case 'page': return "page.php?url={$content->url}"; break;
-        case 'post': return "blog.php?slug={$content->slug}"; break;
-        default: return null; break;
-      }
-    }
-*/
 }

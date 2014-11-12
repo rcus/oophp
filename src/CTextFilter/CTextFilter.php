@@ -98,8 +98,7 @@ class CTextFilter
     * @return string as the formatted html-text.
     */
     private function markdown($text) {
-        require_once(__DIR__ . '/php-markdown/Michelf/Markdown.php');
-        require_once(__DIR__ . '/php-markdown/Michelf/MarkdownExtra.php');
+        require_once(__DIR__ . '/../../lib/php-markdown/Michelf/MarkdownExtra.inc.php');
         return \Michelf\MarkdownExtra::defaultTransform($text);
     }
 
