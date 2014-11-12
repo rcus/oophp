@@ -13,6 +13,16 @@ $herbert['title'] = "Redovisning";
 $herbert['main'] = <<<EOD
 <h1>Redovisning av kursmomenten</h1>
 
+<h2>Kmom05: Lagra innehåll i databasen</h2>
+<h3>Moduler i Herbert</h3>
+<p>Det känns gott att Herbert växer. Även om nuvarande moduler är begränsade (jag har t.ex. inte integrerat CContent med tidigare innehåll) så känns det som att Herbert skulle kunna bli något som kan användas framöver. Kanske inte i just denna form, men med upplägget med moduler och klasser. Att nu kunna lagra information i databas gör att innehållet kan växa fortare.</p>
+<h3>Struktur och kontroller</h3>
+<p>Jag försökte flytta det mesta av funktionerna till klasserna och kalla på dem från sidkontrollerna. Det fanns även en tanke på att hålla funktionerna så generella som möjligt för att kunna återanvända dem i olika sammanhang, kanske även kommande.</p>
+<h3>Känsla för struktur</h3>
+<p>Känslan växer sig starkare ju mer jag jobbar med strukturen. Det är lättare att hitta det som jag är ute efter när jag behöver göra någon ändring. Det svåra är bara att hålla isär strukturerna. Herbert har en struktur, Anax-MVC (japp, läser phpmvc parallellt) en annan, Wordpress har en tredje och sen finns det ju andra som jag kikar på lite då och då.</p>
+<h3>Viktiga moduler</h3>
+<p>Modultänket innebär att det skulle kunna gå att lägga in i princip vad som helst. Så frågan är egentligen till vad man ska använda Herbert till. Det som jag skulle vilja jobba igenom mer är innehållsbiten, att kunna redigera sidor front-end för att slippa redigera enskilda filer. Det i sin tur skulle kräva fungerande användarstruktur, vilket har några bitar kvar i nuvarande utformning. Det som jag helt har släppt i Herbert är layouten, jag har valt att fokusera på funktionaliteten. Men det skulle vara ett viktigt steg framöver.</p>
+
 <h2>Kmom04: PHP PDO och MySQL</h2>
 <h3>PHP PDO</h3>
 <p>PDO är en ny bekantskap för mig. Poängen, om jag har fattat det rätt, är att man ska kunna koda på samma sätt oavsett vilken databasmotor man har. Om nu PDO stödjer den typen, såklart. Jag ser genast en klar fördel. Jag har kört MySQL, men steget till en annan databas skulle vara väldigt litet. Men sen är jag inte riktigt med i alla steg med för att skicka iväg sin query. Nu har jag lärt mig att kunna binda variabler på sett bra sätt, förutom att det inte gick för ORDER BY. Tre timmar extra bara på att komma på hur man ska använda det på ett bra sätt! Till slut fick jag hårdkoda in variablerna, när jag till slut hittade en länk om att just dem går inte att ha som referenser. Suck!</p>

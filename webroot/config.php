@@ -80,9 +80,9 @@ EOD;
  * Settings for the database.
  *
  */
-$herbert['db']['dsn']            = 'mysql:host=localhost;dbname=matg12;'; //blu-ray.student.bth.se
-$herbert['db']['username']       = 'userbth'; //matg12
-$herbert['db']['password']       = 'passwordbth';
+$herbert['db']['dsn']            = 'mysql:host=blu-ray.student.bth.se;dbname=matg12;';
+$herbert['db']['username']       = 'matg12';
+$herbert['db']['password']       = '';
 $herbert['db']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
 
 
