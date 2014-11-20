@@ -28,6 +28,11 @@ class CImage
 
 
 
+    /**
+     * Validate and set static values
+     *
+     * @param array $init Configuration values.
+     */
     public function __construct($init)
     {
         // Validate arguments
@@ -42,6 +47,11 @@ class CImage
         self::$maxHeight = $init['maxHeight'];
     }
 
+    /**
+     * Validate and set src value.
+     *
+     * @param string $value Value to set.
+     */
     public function setSrc($value)
     {
         // Validate incoming argument
@@ -52,6 +62,11 @@ class CImage
         $this->src = $value;
     }
 
+    /**
+     * Set verbose value.
+     *
+     * @param string $value Value to set.
+     */
     public function setVerbose($value)
     {
         $this->verbose = $value;
@@ -60,6 +75,11 @@ class CImage
         }
     }
 
+    /**
+     * Validate and set save as value.
+     *
+     * @param string $value Value to set.
+     */
     public function setSaveAs($value)
     {
         // Validate incoming argument
@@ -69,6 +89,11 @@ class CImage
         $this->saveAs = $value;
     }
 
+    /**
+     * Validate and set quality value.
+     *
+     * @param string $value Value to set.
+     */
     public function setQuality($value)
     {
         // Validate incoming argument
@@ -78,11 +103,21 @@ class CImage
         $this->quality = $value;
     }
 
+    /**
+     * Set ignore cache value.
+     *
+     * @param string $value Value to set.
+     */
     public function setIgnoreCache($value)
     {
         $this->ignoreCache = $value;
     }
 
+    /**
+     * Validate and set width value.
+     *
+     * @param string $value Value to set.
+     */
     public function setNewWidth($value)
     {
         // Validate incoming argument
@@ -92,6 +127,11 @@ class CImage
         $this->newWidth = $value;
     }
 
+    /**
+     * Validate and set height value.
+     *
+     * @param string $value Value to set.
+     */
     public function setNewHeight($value)
     {
         // Validate incoming argument
@@ -101,6 +141,11 @@ class CImage
         $this->newHeight = $value;
     }
 
+    /**
+     * Validate and set crop to fit value.
+     *
+     * @param string $value Value to set.
+     */
     public function setCropToFit($value)
     {
         // Validate incoming argument
@@ -110,12 +155,21 @@ class CImage
         $this->cropToFit = $value;
     }
 
+    /**
+     * Set sharpen value.
+     *
+     * @param string $value Value to set.
+     */
     public function setSharpen($value)
     {
         $this->sharpen = $value;
     }
 
 
+    /**
+     * Call to get the image. If needed, prepare and save cahce.
+     *
+     */
     public function getOutput()
     {
         // Set path to the image
@@ -131,12 +185,12 @@ class CImage
 
         // If verbose mode, send some image info
         if($this->verbose) {
-          $this->verbose("Image file: {$imgPath}");
-          $this->verbose("Image information: ". print_r($imgInfo, true));
-          $filesize = filesize($imgPath);
-          $this->verbose("Image file size: {$filesize} bytes.");
-          $this->verbose("Image width x height (type): {$width} x {$height} ({$type}).");
-          $this->verbose("Image mime type: {$mime}.");
+            $this->verbose("Image file: {$imgPath}");
+            $this->verbose("Image information: ". print_r($imgInfo, true));
+            $filesize = filesize($imgPath);
+            $this->verbose("Image file size: {$filesize} bytes.");
+            $this->verbose("Image width x height (type): {$width} x {$height} ({$type}).");
+            $this->verbose("Image mime type: {$mime}.");
         }
 
         // Calculate new width and height for the image
@@ -305,10 +359,8 @@ class CImage
 
 
      /**
-     * Display log message.
-     * Start displaying log if verbose mode & create url to current image
+     * Init verbose
      *
-     * @param string $message the log message to display.
      */
     private function verboseInit() {
         $query = array();
@@ -331,7 +383,7 @@ class CImage
 
 
     /**
-     * Display log message.
+     * Store log message.
      *
      * @param string $message the log message to display.
      */
@@ -341,9 +393,8 @@ class CImage
 
 
     /**
-     * Display log message.
+     * Display log message and exit.
      *
-     * @param string $message the log message to display.
      */
     private function verboseOutput() {
         echo $this->verboseOutput;
@@ -352,7 +403,7 @@ class CImage
 
 
     /**
-     * Output an image together with last modified header.
+     * Output an image together with last modified header, then exit.
      *
      * @param string $file as path to the image.
      */
