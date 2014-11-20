@@ -13,16 +13,6 @@ $content = new CContent($herbert['db']);
 // If someone has logged in, get username
 $user = isset($_SESSION['auth']) ? $_SESSION['auth']->GetAcronym() : null;
 
-// Get all content
-/*
-$sql = '
-  SELECT *, (published <= NOW()) AS available
-  FROM Content;
-';
-$res = $content->ExecuteSelectQueryAndFetchAll($sql);
-*/
-//$res = $content->GetAllContent();
-
 // Put results into a list
 $pages = null;
 $posts = null;
