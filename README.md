@@ -33,6 +33,18 @@ The following external modules are included and subject to its own license.
 History
 -----------------------------------
 
+v6.0
+* Release for Kmom06
+* New features for images and gallery
+
+v5.0
+* Release for Kmom05
+* Store information in database
+
+v4.0
+* Release for Kmom04
+* CDatabase added
+
 v3.0
 * Release for Kmom03
 

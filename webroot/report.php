@@ -13,6 +13,22 @@ $herbert['title'] = "Redovisning";
 $herbert['main'] = <<<EOD
 <h1>Redovisning av kursmomenten</h1>
 
+
+<h2>Kmom06: Bildbearbetning och galleri</h2>
+<p>Det fungerade bra. Lite pill, som vanligt, men det brukar gå ihop sig rätt bra. Känslan var också att jag har mer koll på läget under själva arbetsgången, vilket känns gott. Stötte dock på ett, för mig, skumt problem. Om jag kallar på galleriinnehållet före breadcrumb, så får jag felmeddelande. Men tvärtom är det inga problem. Anar att det har något att göra med parametern som jag skickar iväg och funktionen glob(). Men jag har inte satt mig in mer i det hela, det funkar ju nu :)</p>
+<h3>Tidigare erfarenheter av bildhantering</h3>
+<p>I den här formen har jag inte arbetat med bildhantering tidigare. Att det var möjligt, och att det blev en punkt på min det-här-kanske-jag-ska-pilla-med-någon-dag-lista, visste jag då jag har sett funktionen av detta i exempelvis Wordpress. Kul att testa på!</p>
+<h3>PHP GD</h3>
+<p>Biblioteket känns lätt att komma igång med och verkar vara rätt innehållsrikt. Det jag använde fungerade smidigt, men jag kan tänka mig att det finns rätt mycket mer att använda sig av. Så det är bara att kika vidare i PHP's manual...</p>
+<h3>img.php</h3>
+<p>Det kan absolut vara ett bra verktyg. Dels eftersom man kan redigera bilden på flera olika sätt, dels för att resultatet sparas i cachen så att det inte behövs renderas på nytt. Nu har jag inte använt så mycket bilder ännu, men fördelen är att man kan få till en bättre och mer mångsidig användning av bilder.</p>
+<h3>Herbert</h3>
+<p>Roligt att se att Herbert växer. Jag vet ännu till vilken användning jag ska ha det till, därför är det svårt att se vad som saknas. Det som jag vill få till bättre är användningen av innehåll, att lägga till och bearbeta. Det är begränsat i nuläget, men grunden är väldigt god. Därför går det, om man vill, jobba vidare mycket med funktionerna.</p>
+
+
+
+
+
 <h2>Kmom05: Lagra innehåll i databasen</h2>
 <h3>Moduler i Herbert</h3>
 <p>Det känns gott att Herbert växer. Även om nuvarande moduler är begränsade (jag har t.ex. inte integrerat CContent med tidigare innehåll) så känns det som att Herbert skulle kunna bli något som kan användas framöver. Kanske inte i just denna form, men med upplägget med moduler och klasser. Att nu kunna lagra information i databas gör att innehållet kan växa fortare.</p>
