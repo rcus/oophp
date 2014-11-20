@@ -290,7 +290,7 @@ class CImage
             }
             $cropX = round(($width - $cropWidth) / 2);  
             $cropY = round(($height - $cropHeight) / 2);    
-            $imageResized = imagecreatetruecolor($this->newWidth, $this->newHeight);
+            $imageResized = $this->createImageKeepTransparency($this->newWidth, $this->newHeight);
             imagecopyresampled($imageResized, $image, 0, 0, $cropX, $cropY, $this->newWidth, $this->newHeight, $cropWidth, $cropHeight);
             $image = $imageResized;
             $width = $this->newWidth;
@@ -300,7 +300,7 @@ class CImage
             if($this->verbose) {
                 $this->verbose("Resizing, new height and/or width.");
             }
-            $imageResized = imagecreatetruecolor($this->newWidth, $this->newHeight);
+            $imageResized = $this->createImageKeepTransparency($this->newWidth, $this->newHeight);
             imagecopyresampled($imageResized, $image, 0, 0, 0, 0, $this->newWidth, $this->newHeight, $width, $height);
             $image = $imageResized;
             $width = $this->newWidth;
@@ -328,6 +328,9 @@ class CImage
             if($this->verbose) {
                 $this->verbose("Saving image as PNG to cache.");
             }
+            // Turn off alpha blending and set alpha flag
+            imagealphablending($image, false);
+            imagesavealpha($image, true);
             imagepng($image, $cacheFileName);  
             break;  
         default:
@@ -401,6 +404,19 @@ class CImage
         exit;
     }
 
+
+    /**
+     * Create new image and keep transparency
+     *
+     * @param resource $image the image to apply this filter on.
+     * @return resource $image as the processed image.
+     */
+    function createImageKeepTransparency($width, $height) {
+        $img = imagecreatetruecolor($width, $height);
+        imagealphablending($img, false);
+        imagesavealpha($img, true);  
+        return $img;
+    }
 
     /**
      * Output an image together with last modified header, then exit.
