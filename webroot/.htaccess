@@ -4,6 +4,8 @@ ErrorDocument 404 "Hey, what are you doing? It's not here... (404)"
 
 Options +FollowSymlinks
 RewriteEngine on
+# Uncomment line below for www.student.bth.se
+#RewriteBase /~matg12/oophp/kmom06/webroot/
 
 # Rewrite to img.php
 RewriteRule ^image/(.*)$ img/img.php?src=$1 [QSA,NC,L]

@@ -312,7 +312,7 @@ class CImage
             if($this->verbose) {
                 $this->verbose("Apply filter: Sharpen.");
             }
-            $image = sharpenImage($image);
+            $image = $this->sharpenImage($image);
         }
 
         // Save the image
