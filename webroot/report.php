@@ -13,6 +13,25 @@ $herbert['title'] = "Redovisning";
 $herbert['main'] = <<<EOD
 <h1>Redovisning av kursmomenten</h1>
 
+<h2>Kmom07/10: Projekt och examination</h2>
+<p>Rental Movies: <a href="http://www.student.bth.se/~matg12/oophp/rental">http://www.student.bth.se/~matg12/oophp/rental</a></p>
+<h3>Krav 1: Struktur och innehåll</h3>
+<p>Här var det att få till grundförutsättningarna för fortsatt arbete. Min tanke med hela projektet är att försöka jobba enligt KISS, alltså enkelt och funktionellt. Det har gått smidigt att starta med Herbert (min version av Anax-base), jag har skapat de olika sidorna så att jag sedan kan koncentrera mig på respektive sidinnehåll i kommande kravpunkter. Roligt att kunna använda ett tidigare arbete som grund för "nytt" projekt. även om det kommer bli lite tillägg efter hand av sådant som jag har gjort, jag har nämnligen inte uppdaterat Herbert efter kursens gång utan får lägga till det nu.</p>
+<p>Mitt val av databas stod mellan MySQL och SQLite. Jag valde den första, då jag känner mig mer bekväm med. SQLite lockade lite, då den kan följa med i repo't och jag kan utveckla lokalt först, utan att behöva ändra inställningar/lösenord eller kopiera databasens innehåll mellan lokal server och BTH's. Men jag kompromissade lite, lät lösenordet följa med repo't och gjorde en lokal pekning till min MySQL-server. På så sätt behöver jag inte göra några nya databasinställningar vid flytt, förutom se till att det finns data i MySQL på studentservern.</p>
+<h3>Krav 2: Sida - Filmer</h3>
+<p>Detta moment tog längre tid. Mina tankar kring strukturen förändrades under tiden, i takt med att funktionaliteten växte. Jag vill helt enkelt göra ett bra jobb, lär mig på vägen och sedan inser att det jag tidigare har gjort kunde göras på ett annat sätt. Nåja, det är ju lärorikt, även om det tar lite längre tid. Jag har funderat kring strukturen, tyckte det blev rörigt att ha en del i sidkontrollern och en del i klass-filen. Fick idén att lägga över mer eller mindre allt till klassen, dels för att samla koden och få överblick, men även för att inte behöva skicka variabler fram och tillbaka. Sagt och gjort. I detta passade jag på att skapa arrayer som sparar inkommande parametrar och andra inställningar. (Det blev bitvis mycket påläsning om arrayer.) Försökte även skapa generella funktioner, så att jag kan återanvända dem när jag t.ex. ska hämta filmens, använda eller alla genrer, eller antingen spara eller uppdatera en ny film. I slutändan blev jag nöjd, även då det blev mycket kod och översiktligheten försvann något.</p>
+<h3>Krav 3: Sida - Nyheter</h3>
+<p>Härligt, det blev bekräftat att stora delar av filmklassen (krav 2) blev bra. Detta momentet gick mycket smidigare att skapa, då jag kunde återanvända mycket från förra klassen. Sen när gick igenom såg jag med nya ögon på det jag tidigare gjorde och ser möjligheter att förbättra ytterligare. Jag blev nöjd med en metod (GetCategory), där jag returnerar antingen ett id för en kategori, kategorinamnet eller en hel array med alla kategorier (id och namn) beroende på vad man skickar in i den.</p>
+<p>När jag håller på med projektet ser jag massor med småsaker jag skulle vilja göra, som en bätte texteditor, validera mera, layout, utöka funktioner med att ladda upp eget material osv, osv. Men för att det bli hållbart i tid håller jag mig till kraven. Får se om jag fortsätter efter avslutad kurs...</p>
+<h3>Krav 4: Första sidan</h3>
+<p>Det har lönat sig att lägga ner arbete i början. Nu blev det hyfsat smidigt att få till funktionerna för att få fram info från databasen. Med en enkel LIMIT 3 i SQL-koden var det sedan smidigt att gå igenom dem med en foreach-loop. Det som gjordes här var mer att få ett bra upplägg på förstasidan, så att det presenterades på ett tydligt sätt. Min tanke var att filmernas framsidor (bilderna) skulle få stor plats, vilket de fick.</p>
+<h3>Krav 5, 6: Extra funktioner (optionell)</h3>
+<p>Tävling: Lagt till spelet Kasta gris. Spelet är inlagt från ett tidigare kursmoment, jag har bara justerat några meddelanden. Smidigt med en fungerande struktur sedan innan.</p>
+<p>Herbert: Mitt Anax är nu uppdaterat på GitHub (<a href="https://github/rcus/herbert">https://github/rcus/herbert</a>) med de klasser som har använts i tidigare kursmoment och projektet.</p>
+<h3>Projektet</h3>
+<p>Roligt med ett "konkret" projekt (hyrfilmer sägs ju vara rätt hett!). Det är lättare när jag vet vad slutresultatet ungefär ska bli. Jag kan inte säga att jag hade några stora problem, men det tar alltid längre tid än vad jag tänker mig innan allt faller på plats. Som krav 2, där jag från början inte kunde se vilken struktur som fungerar bäst. Det gjorde att jag strukturerade om efter hand, vilket tog mycket tid. Jag tänker mig att det kommer bli bättre allt eftersom jag får mer programmeringserfarenhet. Tidsmässigt har det gått hyfsat snabbt. Dock har studierna förskjutits i projektet, då andra kurser har behövt få ta mer tid. Projektet i sig har varit fullt rimligt, och med möjligheter till att utöka efter eget initativ.</p>
+<h3>Kursen</h3>
+<p>Det har varit en intressant och lärorik kurs. Kurslitteraturen har varit relevant och bra. Lätt att läsa, bra och helteckande beskrivningar för de olika områdena inom PHP/MySQL. Tror dock att jag antagligen inte kommer använda den så mycket framöver, för att hitta svar på frågor/problem är det smidigare att googla. Webbplatsen dbwebb innehåller bra och beskrivande vägledningar för de olika kursmomenten. överlag är jag mycket nöjd med kursen, rekommenderar gärna den och dbwebb till vänner. Kursbetyg: 7 av 10</p>
 
 <h2>Kmom06: Bildbearbetning och galleri</h2>
 <p>Det fungerade bra. Lite pill, som vanligt, men det brukar gå ihop sig rätt bra. Känslan var också att jag har mer koll på läget under själva arbetsgången, vilket känns gott. Stötte dock på ett, för mig, skumt problem. Om jag kallar på galleriinnehållet före breadcrumb, så får jag felmeddelande. Men tvärtom är det inga problem. Anar att det har något att göra med parametern som jag skickar iväg och funktionen glob(). Men jag har inte satt mig in mer i det hela, det funkar ju nu :)</p>
@@ -24,10 +43,6 @@ $herbert['main'] = <<<EOD
 <p>Det kan absolut vara ett bra verktyg. Dels eftersom man kan redigera bilden på flera olika sätt, dels för att resultatet sparas i cachen så att det inte behövs renderas på nytt. Nu har jag inte använt så mycket bilder ännu, men fördelen är att man kan få till en bättre och mer mångsidig användning av bilder.</p>
 <h3>Herbert</h3>
 <p>Roligt att se att Herbert växer. Jag vet ännu till vilken användning jag ska ha det till, därför är det svårt att se vad som saknas. Det som jag vill få till bättre är användningen av innehåll, att lägga till och bearbeta. Det är begränsat i nuläget, men grunden är väldigt god. Därför går det, om man vill, jobba vidare mycket med funktionerna.</p>
-
-
-
-
 
 <h2>Kmom05: Lagra innehåll i databasen</h2>
 <h3>Moduler i Herbert</h3>

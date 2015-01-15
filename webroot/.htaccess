@@ -1,11 +1,14 @@
 # http://httpd.apache.org/docs/current/mod/core.html#errordocument
-#ErrorDocument 404 /404.php
-ErrorDocument 404 "Hey, what are you doing? It's not here... (404)"
+ErrorDocument 404 /404.php
+#ErrorDocument 404 "Hey, what are you doing? It's not here... (404)"
 
 Options +FollowSymlinks
 RewriteEngine on
 # Uncomment line below for www.student.bth.se
-#RewriteBase /~matg12/oophp/kmom06/webroot/
+#RewriteBase /~matg12/oophp/kmom10/webroot/
 
 # Rewrite to img.php
 RewriteRule ^image/(.*)$ img/img.php?src=$1 [QSA,NC,L]
+
+# Rewrite to gallery.php
+RewriteRule ^gallery/(.*)$ gallery.php?path=$1 [QSA,NC,L]
